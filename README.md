@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/Laveycc/myfirst/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+第一步：修改tomcat-users.xml配置文件，配置用户、密码和权限
 ```
+<role rolename="manager-gui" />
+<role rolename="manager-script" />
+<user username="tomcat" password="tomcat" roles="manager-gui, manager-script"/>
+```
+第二步：在pom文件中配置tomcat插件。
+![这里写图片描述](http://img.blog.csdn.net/20170604135923777?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva29uZ19sZXY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+第三步：部署
+初次部署可以使用 "tomcat7:deploy" 命令
+如果已经部署过使用 "tomcat7:redeploy" 命令
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+![这里写图片描述](http://img.blog.csdn.net/20170604140101044?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva29uZ19sZXY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+<font color="red">注意：</font>
+先启动tomcat，再进行部署。
+部署完成后，就可以通过部署的网址进行访问了。
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Laveycc/myfirst/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
